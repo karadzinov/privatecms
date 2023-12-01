@@ -40,7 +40,7 @@ if($conn) {
     $query = mysqli_query($conn, $insert);
 
     if($query) {
-       header('Location: /index.php');
+       header('Location: /login.php');
     }
 
 

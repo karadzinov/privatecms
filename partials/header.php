@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
     <!-- MDB -->
     <link rel="stylesheet" href="/css/mdb.min.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
 </head>
 <body>
 <!-- Navbar -->
@@ -59,6 +60,10 @@
                 echo '<button data-mdb-ripple-init type="button" class="btn btn-link px-3 me-2">
                 '.$_SESSION['user']['first_name'].' '. $_SESSION['user']['last_name'] . '
                 </button>';
+
+                echo ' <a href="/logout.php" data-mdb-ripple-init type="button" class="btn btn-primary px-3 me-2">
+                    Logout
+                </a>';
             } else {
                 echo '<div class="d-flex align-items-center">
                 <a href="/login.php" data-mdb-ripple-init type="button" class="btn btn-link px-3 me-2">
