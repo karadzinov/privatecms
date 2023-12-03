@@ -26,7 +26,7 @@ $result = mysqli_query($conn, $query);
 while($user = mysqli_fetch_assoc($result)) {
     if(($user['email'] === $email) && ($user['password'] === $password)) {
             $_SESSION['user'] = $user;
-            header('Location: /index.php');
+            header('Location: /dashboard.php');
     }
 }
 

@@ -9,8 +9,11 @@ $users = selectAll($conn, 'users');
 
 
     <div class="row">
-        <div class="col-md-12 mt-4  m-lg-5">
+        <div class="col-md-10 mt-4 m-lg-5">
             <h1>Users</h1>
+            <p>
+                <a href="create-user.php" class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i> Create User</a>
+            </p>
 
             <table class="table">
                 <thead>
@@ -20,6 +23,7 @@ $users = selectAll($conn, 'users');
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Role</th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -32,6 +36,7 @@ $users = selectAll($conn, 'users');
                    <td>'.$user['last_name'].'</td>
                    <td>'.$user['email'].'</td>
                    <td>'.$user['role_id'].'</td>
+                   <td><a href="/user-edit.php?id='.$user['id'].'" class="btn btn-warning">Edit</a></td>
                 </tr>';
                 }
 

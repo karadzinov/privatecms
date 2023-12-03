@@ -35,3 +35,37 @@ function deleteRow($conn, $table, $id)
     $db = mysqli_query($conn, $query);
     return $db;
 }
+
+function insertRow($conn, $table, $data)
+{
+    $keys = '';
+    $values = '';
+    foreach($data as $key => $value)
+    {
+        $keys .= $key. ', ';
+        $values .= "'$value', ";
+    }
+
+    $keys = substr($keys, 0, -2);
+    $values = substr($values, 0, -2);
+
+
+    $query = "INSERT INTO $table ($keys) VALUES ($values)";
+    $db = mysqli_query($conn, $query);
+    return $db;
+}
+
+
+function updateRow($conn, $table, $data, $id)
+{
+    $set = '';
+    foreach($data as $key => $value) {
+        $set .= "$key='$value', ";
+    }
+
+    $set = substr($set, 0, -2);
+
+    $query = "UPDATE $table SET $set WHERE id=$id";
+    $db = mysqli_query($conn, $query);
+    return $db;
+}

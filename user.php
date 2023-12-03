@@ -17,7 +17,7 @@ $user = selectOne($conn, 'users', $id);
             <h1>User</h1>
             <p> First Name: <?= $user['first_name'] ?> </p>
             <p> Last Name: <?= $user['last_name'] ?> </p>
-            <p> Email: <?= $user['last_name'] ?> </p>
+            <p> Email: <?= $user['email'] ?> </p>
 
             <a href="process/delete-user.php?id=<?= $user['id'] ?>" class="btn btn-danger">Delete User</a>
         </div>
