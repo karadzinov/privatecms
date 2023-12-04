@@ -1,9 +1,9 @@
 <?php
 
-define('HOSTNAME', 'localhost');
-define('USERNAME', 'homestead');
-define('PASSWORD', 'secret');
-define('DB', 'g5');
+
+
+
+require_once $_SERVER['DOCUMENT_ROOT']."/config/global.php";
 
 
 $conn = mysqli_connect(HOSTNAME, USERNAME, PASSWORD, DB) or die();

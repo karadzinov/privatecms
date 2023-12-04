@@ -3,6 +3,12 @@
 
 require_once "functions.php";
 
+require_once "../helper/image_upload.php";
+
+
+
+$image = imageUpload('image');
+
 
 if(isset($_POST['first_name']) && !empty($_POST['first_name'])) {
     $first_name = $_POST['first_name'];
@@ -32,7 +38,7 @@ if(isset($_POST['password']) && !empty($_POST['password'])) {
 
 $id  = $_POST['id'];
 
-$data = ["first_name" => $first_name, "last_name" => $last_name, "email"  => $email, "password" => $password];
+$data = ["first_name" => $first_name, "last_name" => $last_name, "email"  => $email, "password" => $password, "image" => $image];
 
 $user = updateRow($conn, 'users', $data, $id);
 

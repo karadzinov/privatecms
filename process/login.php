@@ -15,6 +15,8 @@ if(isset($_POST['password']) && !empty($_POST['password'])) {
 }
 
 
+
+
 $conn = mysqli_connect('localhost', 'homestead', 'secret', 'g5');
 
 $query = "SELECT * FROM users";

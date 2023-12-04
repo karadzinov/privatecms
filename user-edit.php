@@ -13,9 +13,18 @@ $user = selectOne($conn, 'users', $id);
 <div class="container">
     <div class="row mt-md-5">
         <div class="col-md-10">
-            <form action="/process/update-user.php" method="post">
+
+            <img src="/uploads/<?=  $user['image']; ?>" alt="<?= $user['first_name'] ?>" >
 
 
+            <form action="/process/update-user.php" method="post" enctype="multipart/form-data">
+
+                <div class="row mb-4">
+                    <div class="col">
+                        <input type="file" name="image" class="form-control" id="image">
+                        <label class="form-label" for="image">Upload Image</label>
+                    </div>
+                </div>
                 <input type="hidden" name="id" value="<?= $user['id'] ?>">
                 <!-- 2 column grid layout with text inputs for the first and last names -->
                 <div class="row mb-4">

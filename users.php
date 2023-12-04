@@ -19,6 +19,7 @@ $users = selectAll($conn, 'users');
                 <thead>
                 <tr>
                     <th>Id</th>
+                    <th>Image</th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
@@ -32,6 +33,7 @@ $users = selectAll($conn, 'users');
                     echo '
                 <tr>
                    <td><a href="/user.php?id='.$user['id'].'">'.$user['id'].'</a></td>
+                   <td><img src="/uploads/'.$user['image'].'" class="img-thumbnail" /></td>
                    <td>'.$user['first_name'].'</td>
                    <td>'.$user['last_name'].'</td>
                    <td>'.$user['email'].'</td>

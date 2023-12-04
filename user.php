@@ -15,6 +15,7 @@ $user = selectOne($conn, 'users', $id);
     <div class="row">
         <div class="col-md-12 mt-4  m-lg-5">
             <h1>User</h1>
+            <p><img src="/uploads/<?= $user['image'] ?>" class="img-thumbnail" /></p>
             <p> First Name: <?= $user['first_name'] ?> </p>
             <p> Last Name: <?= $user['last_name'] ?> </p>
             <p> Email: <?= $user['email'] ?> </p>
