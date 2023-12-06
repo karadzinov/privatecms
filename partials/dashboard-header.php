@@ -13,6 +13,9 @@
                 <li>
                     <a href="/products.php" class="btn btn-danger">Products</a>
                 </li>
+                <li>
+                    <a href="/blogs.php" class="btn btn-info">Blogs</a>
+                </li>
             </ul>
         </div>
         <div class="col-md-10">
